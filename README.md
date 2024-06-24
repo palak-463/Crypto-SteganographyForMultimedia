@@ -1,8 +1,8 @@
 # Crypto-Steganography For MultiMedia
 
-A secure system that allows users to hide sensitive information within images and audio files, employing advanced cryptographic algorithms and steganographic techniques.
+A secure system that allows users to hide sensitive information within images and audio files, employing advanced cryptographic algorithms and steganographic techniques. Users interact with the system via an intuitive interface to input text data and select the desired media type. Employing advanced cryptographic algorithms and steganographic techniques, the system ensures the encrypted data is seamlessly embedded within the media files while maintaining their integrity. 
 
-<br><br>
+<br>
 
 System Flow:<br><br>
 The user provides the data to be hidden and selects the type of media (image or audio) for embedding which is used as a carrier.<br><br>
