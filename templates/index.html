@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSB Encoder/Decoder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='placeholder.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">Hide Data</h1>
+                        <form action="{{ url_for('encode') }}" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="text_message">Enter Text Message:</label>
+                                <input type="text" name="text_message" id="text_message" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="image_file">Select Image File:</label>
+                                <input type="file" name="image_file" id="image_file" class="form-control-file" accept="image/*" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Encode</button>
+                            </div>
+                            {% if result %}
+                                <div class="mt-4 text-center">
+                                    <h2>{{ result }}</h2>
+                                </div>
+                            {% endif %}
+                        </form>
+                        <hr>
+                        <form action="{{ url_for('decode') }}" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="decode_image_file">Select Image File to Decode:</label>
+                                <input type="file" name="image_file" id="decode_image_file" class="form-control-file" accept="image/*" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Decode</button>
+                            </div>
+                            {% if decoded_msg %}
+                                <div class="mt-4 text-center">
+                                    <h3>Decoded Message:</h3>
+                                    <h2>{{ decoded_msg }}</h2>
+                                </div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
