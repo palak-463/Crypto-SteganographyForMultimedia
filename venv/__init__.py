@@ -1,13 +1,25 @@
-from typing import List, Optional
+from __future__ import annotations
 
-__version__ = "24.0"
+import typing as t
+
+from .serving import run_simple as run_simple
+from .test import Client as Client
+from .wrappers import Request as Request
+from .wrappers import Response as Response
 
 
-def main(args: Optional[List[str]] = None) -> int:
-    """This is an internal API only meant for use by pip's own console scripts.
+def __getattr__(name: str) -> t.Any:
+    if name == "__version__":
+        import importlib.metadata
+        import warnings
 
-    For additional details, see https://github.com/pypa/pip/issues/7498.
-    """
-    from pip._internal.utils.entrypoints import _wrapper
+        warnings.warn(
+            "The '__version__' attribute is deprecated and will be removed in"
+            " Werkzeug 3.1. Use feature detection or"
+            " 'importlib.metadata.version(\"werkzeug\")' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return importlib.metadata.version("werkzeug")
 
-    return _wrapper(args)
+    raise AttributeError(name)
