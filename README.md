@@ -1,4 +1,4 @@
-# Crypto-Steganography For MultiMedia
+# Crypto-Steganography For Multimedia
 
 A secure system that allows users to hide sensitive information within images and audio files, employing advanced cryptographic algorithms and steganographic techniques. Users interact with the system via an intuitive interface to input text data and select the desired media type. Employing advanced cryptographic algorithms and steganographic techniques, the system ensures the encrypted data is seamlessly embedded within the media files while maintaining their integrity. 
 
