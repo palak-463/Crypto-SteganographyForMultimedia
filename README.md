@@ -7,5 +7,5 @@ A secure system that allows users to hide and retrieve sensitive information thr
 System Flow:<br><br>
 The user provides the data to be hidden and selects the type of media (image or audio) for embedding which is used as a carrier.<br>
 The data is encrypted using the AES for symmetric encryption, and then prepared for embedding.<br>
-Depending on the selected media type, appropriate steganographic techniques are applied; for images, hybridization of algorithms like LSB and RLSB is used, while audio employs phase coding technique.<br>
+Depending on the selected media type, appropriate steganographic techniques are applied; for images, hybridization of algorithms like LSB and RLSB is used, while audio employs Phase Coding technique.<br>
 Message is decrypted when the encoded multimedia file is provided without tampering the quality of the image or audio file.
