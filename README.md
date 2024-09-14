@@ -35,7 +35,6 @@ The system offers an intuitive interface where users can input sensitive text da
 
 ## ✨ Technologies Used
 
-| Technology | 
 |------------|
 | **Python** | 
 | **C**      | 
