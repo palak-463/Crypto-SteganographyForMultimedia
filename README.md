@@ -10,7 +10,7 @@ The system offers an intuitive interface where users can input sensitive text da
 
 <br>
 
-## 🔑 Specifications
+## 🔑 Working
 
 - **AES Encryption**: Data is securely encrypted using the **AES (Advanced Encryption Standard)** symmetric encryption algorithm.
 - **Image Steganography**: Utilizes hybrid techniques like **LSB (Least Significant Bit)** and **RLSB (Random LSB)** for hiding data in images.
@@ -35,8 +35,9 @@ The system offers an intuitive interface where users can input sensitive text da
 
 ## ✨ Technologies Used
 
-| **Python** | 
-| **C**      | 
+| Frontend   | Backend    | 
+|------------|------------|
+| **Python** | **C**      | 
 
 <br>
 
